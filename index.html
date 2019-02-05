@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
     <title>Konjo Hangman</title>
   </head>
   <body>
     <h1>Konjo Hangman</h1>
     <div class="hangman-board"></div>
-    <form>
-      <input type="text" name="Enter word" value="Here" />
-      <input type="submit" value="Submit" />
+    <form class="word" action="#">
+      <fieldset>
+        <input class="text" type="text" name="hangman-word" value="" />
+        <input class="submit" type="submit" value="Submit" />
+      </fieldset>
     </form>
   </body>
   <script src="main.js"></script>
