@@ -8,7 +8,7 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var space = document.createElement("P");
+    var space = document.createElement("div-space");
     var letter = document.createTextNode("_ ");
     space.appendChild(letter);
     document.body.appendChild(space);
