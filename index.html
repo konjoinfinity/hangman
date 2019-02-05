@@ -12,11 +12,9 @@
   <body>
     <h1>Konjo Hangman</h1>
     <div class="hangman-board"></div>
-    <form class="word" action="#">
-      <fieldset>
-        <input class="text" type="text" name="hangman-word" value="" />
-        <input class="submit" type="submit" value="Submit" />
-      </fieldset>
+    <form>
+      <input type="text" id="hangmanword" />
+      <input type="button" onclick="createWord()" value="Enter Word" />
     </form>
   </body>
   <script src="main.js"></script>
