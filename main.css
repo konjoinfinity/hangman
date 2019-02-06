@@ -18,14 +18,32 @@ h1 {
 }
 
 .word {
-  margin: auto;
+  margin: 5px;
   padding: 5px;
 }
 
+.wordform {
+  margin: 25px;
+  padding: 25px;
+  border: 1px solid black;
+}
+
 div {
-  display: grid | inline-grid;
+  padding-top: 5px;
 }
 
 p {
   display: grid | inline-grid;
+}
+
+.letterbuttons {
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 25px 25px 25px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  align-items: stretch;
+  border: 1px solid black;
+}
+
+body {
 }

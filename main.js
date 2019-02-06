@@ -29,10 +29,6 @@ var lettersCorrect = [];
 
 const checkLetter = function(letter) {
   var guess = document.createElement("p");
-  var winlose = document.createTextNode("Keep Guessing...");
-  guess.appendChild(winlose);
-  var parent1 = document.getElementById("winguesslose");
-  document.getElementById("winguesslose").appendChild(guess);
   //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
@@ -61,7 +57,7 @@ const checkWord = function() {
     var parent = document.getElementById("winguesslose");
     document.getElementById("winguesslose").appendChild(para);
   } else {
-    //console.log("Keep Guessing...");
+    return console.log("Keep Guessing...");
   }
 };
 
