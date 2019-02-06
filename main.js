@@ -28,6 +28,11 @@ const createSpaces = function() {
 var lettersCorrect = [];
 
 const checkLetter = function(letter) {
+  var guess = document.createElement("p");
+  var winlose = document.createTextNode("Keep Guessing...");
+  guess.appendChild(winlose);
+  var parent1 = document.getElementById("winguesslose");
+  document.getElementById("winguesslose").appendChild(guess);
   //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
@@ -50,8 +55,13 @@ const checkWord = function() {
       .innerText.replace(/(\r\n|\n|\r)/gm, "") == hangmanString
   ) {
     console.log("You Win!");
+    var para = document.createElement("p");
+    var t = document.createTextNode("You Win!");
+    para.appendChild(t);
+    var parent = document.getElementById("winguesslose");
+    document.getElementById("winguesslose").appendChild(para);
   } else {
-    console.log("Keep Guessing...");
+    //console.log("Keep Guessing...");
   }
 };
 
