@@ -14,7 +14,12 @@
     <div class="hangman-board"></div>
     <form class="word">
       <input type="text" id="hangmanword" />
-      <input type="button" onclick="createWord()" value="Enter Word" />
+      <input
+        type="button"
+        id="enterWord"
+        onclick="createWord()"
+        value="Enter Word"
+      />
       <input type="button" id="letterA" onclick="checkLetter()" value="A" />
       <input type="button" id="letterB" onclick="checkLetter()" value="B" />
       <input type="button" id="letterC" onclick="checkLetter()" value="C" />

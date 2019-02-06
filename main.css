@@ -24,5 +24,7 @@ h1 {
 
 div {
   display: grid;
+  grid-row: auto auto auto auto auto auto auto auto auto auto auto auto auto
+    auto auto auto auto auto auto auto auto;
   margin: auto;
 }
