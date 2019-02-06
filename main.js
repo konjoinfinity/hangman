@@ -14,12 +14,12 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var space = document.createElement(`div-space${i}`);
-    var letter = document.createTextNode("_ ");
-    space.appendChild(letter);
-    document.body.appendChild(space);
+    var para = document.createElement(`p${i}`);
+    var t = document.createTextNode("_ ");
+    para.appendChild(t);
+    var parent = document.getElementById("wordboard");
+    document.getElementById("wordboard").appendChild(para);
   }
-  console.log(document.querySelectorAll("div-space"));
   spacesArray = hangmanWord[0].length;
   console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
@@ -32,23 +32,26 @@ const checkLetter = function(letter) {
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
       console.log(`${i}`);
-      var blankSpace = document.querySelector(`div-space${i}`);
+      var blankSpace = document.querySelector(`p${i}`);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
-      var letterSpace = document.createElement(`div-${chosenLetter}`);
+      var letterSpace = document.createElement(`p${chosenLetter}`);
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
     }
   }
-  //checkWord();
+
+  const divQuery = `${document.getElementById("wordboard")}`;
+  console.log(divQuery);
+  checkWord();
 };
 
-/*
 const checkWord = function() {
-  var lettersCorrect = ""
+  var lettersCorrect = "";
   for (i = 0; i < hangmanWord[0].length; i++) {
-    lettersCorrect = lettersCorrect + `${document.querySelector(hangmanString.charA(i)}`;
-    console.log(`${document.querySelector(hangmanString.charAt(i)}`);
+    currentLetters = `${document.querySelector("p")}`;
+    lettersCorrect = `${lettersCorrect} + ${currentLetters}`;
+    console.log(document.querySelector("p"));
   }
   for (j = 0; j < hangmanWord[0].length; j++) {
     if (hangmanString == lettersCorrect) {
@@ -58,7 +61,7 @@ const checkWord = function() {
     }
   }
 };
-*/
+
 const letterA = document.getElementById("letterA");
 const letterB = document.getElementById("letterB");
 const letterC = document.getElementById("letterC");
