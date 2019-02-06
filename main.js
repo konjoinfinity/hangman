@@ -1,10 +1,12 @@
 var hangmanWord = [];
 var spacesArray = [];
+var hangmanString = "";
 
 const createWord = function() {
+  hangmanString = document.getElementById("hangmanword").value;
+  console.log(hangmanString);
   hangmanWord.push(document.getElementById("hangmanword").value);
   console.log(hangmanWord);
-  document.getElementById("hangmanword").value = "";
   createSpaces();
 };
 
@@ -16,7 +18,20 @@ const createSpaces = function() {
     document.body.appendChild(space);
   }
   console.log(document.querySelectorAll("div-space"));
-  spacesArray = hangmanword[0].length;
+  spacesArray = hangmanWord[0].length;
+  console.log(hangmanWord[0].length);
+  document.getElementById("hangmanword").value = "";
+};
+
+const checkLetter = function() {
+  console.log("check letter");
+  for (i = 0; i < hangmanWord[0].length; i++) {
+    if (hangmanString.charAt(i) == "a") {
+      console.log("match");
+    } else {
+      console.log("keep guessing...");
+    }
+  }
 };
 
 const letterA = document.getElementById("letterA");
