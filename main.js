@@ -23,10 +23,10 @@ const createSpaces = function() {
   document.getElementById("hangmanword").value = "";
 };
 
-const checkLetter = function() {
-  console.log("check letter");
+const checkLetter = function(letter) {
+  console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
-    if (hangmanString.charAt(i) == "a") {
+    if (hangmanString.charAt(i) == `${letter}`) {
       console.log("match");
     } else {
       console.log("keep guessing...");
@@ -63,6 +63,7 @@ const letterZ = document.getElementById("letterZ");
 
 letterA.addEventListener("click", function(event) {
   console.log(letterA.value);
+  checkLetter("a");
 });
 
 letterB.addEventListener("click", function(event) {
