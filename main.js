@@ -5,9 +5,9 @@ var hiddenLetter = [];
 
 const createWord = function() {
   hangmanString = document.getElementById("hangmanword").value;
-  console.log(hangmanString);
+  //console.log(hangmanString);
   hangmanWord.push(document.getElementById("hangmanword").value);
-  console.log(hangmanWord);
+  //console.log(hangmanWord);
   hangmanString = hangmanString.toUpperCase();
   createSpaces();
   document.getElementById("enterWord").disabled = true;
@@ -24,14 +24,13 @@ const createSpaces = function() {
   }
   console.log(hiddenLetter);
   spacesArray = hangmanWord[0].length;
-  console.log(hangmanWord[0].length);
+  //console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
 };
 
 var lettersCorrect = [];
 
 const checkLetter = function(letter) {
-  console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
       console.log(`${hiddenLetter[i]}`);
