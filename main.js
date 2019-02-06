@@ -13,7 +13,7 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var space = document.createElement("div-space");
+    var space = document.createElement(`div-space${i}`);
     var letter = document.createTextNode("_ ");
     space.appendChild(letter);
     document.body.appendChild(space);
@@ -28,11 +28,16 @@ const checkLetter = function(letter) {
   console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
-      console.log("match");
-    } else {
-      console.log("keep guessing...");
+      console.log(`${i}`);
+      var blankSpace = document.querySelector(`div-space${i}`);
+      var parent = blankSpace.parentNode;
+      var chosenLetter = hangmanString.charAt(i);
+      var letterSpace = document.createTextNode(`${chosenLetter}`);
+      letterSpace.innerHTML = `${chosenLetter}`;
+      parent.replaceChild(letterSpace, blankSpace);
     }
   }
+  console.log("keep guessing...");
 };
 
 const letterA = document.getElementById("letterA");
