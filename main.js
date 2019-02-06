@@ -1,6 +1,7 @@
 var hangmanWord = [];
 var spacesArray = [];
 var hangmanString = "";
+var hiddenLetter = [];
 
 const createWord = function() {
   hangmanString = document.getElementById("hangmanword").value;
@@ -19,14 +20,13 @@ const createSpaces = function() {
     para.appendChild(t);
     var parent = document.getElementById("wordboard");
     document.getElementById("wordboard").appendChild(para);
+    hiddenLetter.push(hangmanString.charAt(i));
   }
+  console.log(hiddenLetter);
   spacesArray = hangmanWord[0].length;
   console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
 };
-
-//innerText.trim() for strings .replace(1, 2)
-//document.querySelector("#wordboard").innerText
 
 var lettersCorrect = [];
 
@@ -34,16 +34,16 @@ const checkLetter = function(letter) {
   console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
-      console.log(`${i}`);
-      var blankSpace = document.querySelector("p");
+      console.log(`${hiddenLetter[i]}`);
+      lettersCorrect = lettersCorrect + `${letter}`;
+      var blankSpace = document.querySelector("p"[i]);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
-      var letterSpace = document.createElement("p");
+      var letterSpace = document.createElement("p"[i]);
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
     }
   }
-
   checkWord();
 };
 
@@ -58,23 +58,7 @@ const checkWord = function() {
     console.log("You Win!");
   }
 };
-/*
-const checkWord = function() {
-  var lettersCorrect = "";
-  for (i = 0; i < hangmanWord[0].length; i++) {
-    currentLetters = `${document.querySelector("p")}`;
-    lettersCorrect = `${lettersCorrect} + ${currentLetters}`;
-    console.log(document.querySelector("p"));
-  }
-  for (j = 0; j < hangmanWord[0].length; j++) {
-    if (hangmanString == lettersCorrect) {
-      console.log("You Win!");
-    } else {
-      console.log("Keep Guessing...");
-    }
-  }
-};
-*/
+
 const letterA = document.getElementById("letterA");
 const letterB = document.getElementById("letterB");
 const letterC = document.getElementById("letterC");
