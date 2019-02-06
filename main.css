@@ -23,5 +23,9 @@ h1 {
 }
 
 div {
-  display: grid;
+  display: grid | inline-grid;
+}
+
+p {
+  display: grid | inline-grid;
 }

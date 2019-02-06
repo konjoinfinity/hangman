@@ -14,7 +14,7 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var para = document.createElement(`p${i}`);
+    var para = document.createElement("p");
     var t = document.createTextNode("_ ");
     para.appendChild(t);
     var parent = document.getElementById("wordboard");
@@ -25,6 +25,9 @@ const createSpaces = function() {
   document.getElementById("hangmanword").value = "";
 };
 
+//innerText.trim() for strings .replace(1, 2)
+//document.querySelector("#wordboard").innerText
+
 var lettersCorrect = [];
 
 const checkLetter = function(letter) {
@@ -32,20 +35,30 @@ const checkLetter = function(letter) {
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == `${letter}`) {
       console.log(`${i}`);
-      var blankSpace = document.querySelector(`p${i}`);
+      var blankSpace = document.querySelector("p");
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
-      var letterSpace = document.createElement(`p${chosenLetter}`);
+      var letterSpace = document.createElement("p");
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
     }
   }
 
-  const divQuery = `${document.getElementById("wordboard")}`;
-  console.log(divQuery);
   checkWord();
 };
 
+const checkWord = function() {
+  const divQuery = document
+    .querySelector("#wordboard")
+    .innerText.replace(/(\r\n|\n|\r)/gm, "");
+  console.log(divQuery);
+  if (divQuery.includes("_") == true) {
+    console.log("Keep Guessing...");
+  } else {
+    console.log("You Win!");
+  }
+};
+/*
 const checkWord = function() {
   var lettersCorrect = "";
   for (i = 0; i < hangmanWord[0].length; i++) {
@@ -61,7 +74,7 @@ const checkWord = function() {
     }
   }
 };
-
+*/
 const letterA = document.getElementById("letterA");
 const letterB = document.getElementById("letterB");
 const letterC = document.getElementById("letterC");
