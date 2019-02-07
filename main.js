@@ -16,7 +16,7 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var para = document.createElement(`p${i}`);
+    var para = document.createElement(`div${i}`);
     var t = document.createTextNode("_ ");
     para.appendChild(t);
     var parent = document.getElementById("wordboard");
@@ -34,10 +34,10 @@ const checkLetter = function(letter) {
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == letter) {
       console.log(i);
-      var blankSpace = document.querySelector(`p${i}`);
+      var blankSpace = document.querySelector(`div${i}`);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
-      var letterSpace = document.createElement(`p${i}`);
+      var letterSpace = document.createElement(`div${i}`);
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
       console.log("Guess Correct!");
@@ -56,14 +56,19 @@ const checkWord = function() {
       .innerText.replace(/(\r\n|\n|\r)/gm, "") == hangmanString
   ) {
     console.log("You Win!");
-    var para = document.createElement("p");
-    var t = document.createTextNode("You Win!");
-    para.appendChild(t);
+    var check = document.createElement("p");
+    var win = document.createTextNode("You Win!");
+    check.appendChild(win);
     var parent = document.getElementById("winguesslose");
-    document.getElementById("winguesslose").appendChild(para);
+    document.getElementById("winguesslose").appendChild(check);
   } else {
     if (clickCounter == 9) {
       console.log("You Lose.");
+      var checkloss = document.createElement("p");
+      var lose = document.createTextNode("You Lose...");
+      checkloss.appendChild(lose);
+      var parent = document.getElementById("winguesslose");
+      document.getElementById("winguesslose").appendChild(checkloss);
     } else {
       console.log("Keep Guessing...");
     }
