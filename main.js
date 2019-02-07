@@ -1,6 +1,7 @@
 var hangmanWord = [];
 var spacesArray = [];
 var hangmanString = "";
+var clickCounter = 1;
 
 const createWord = function() {
   hangmanString = document.getElementById("hangmanword").value;
@@ -28,6 +29,8 @@ const createSpaces = function() {
 var lettersCorrect = [];
 
 const checkLetter = function(letter) {
+  clickCounter = clickCounter += 1;
+  console.log(clickCounter);
   var guess = document.createElement("p");
   //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
@@ -39,6 +42,9 @@ const checkLetter = function(letter) {
       var letterSpace = document.createElement(`p${i}`);
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
+    } else {
+      var imageElement = document.getElementById("hangmanimage");
+      imageElement.setAttribute("src", `img/${clickCounter}.png`);
     }
   }
   checkWord();
@@ -90,7 +96,7 @@ const letterZ = document.getElementById("letterZ");
 
 letterA.addEventListener("click", function(event) {
   //console.log(letterA.value);
-  checkLetter(`${letterA.value}`);
+
   document.getElementById("letterA").disabled = true;
 });
 
