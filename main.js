@@ -1,6 +1,7 @@
 var hangmanWord = [];
 var spacesArray = [];
 var hangmanString = "";
+var lettersCorrect = [];
 var clickCounter = 1;
 
 const createWord = function() {
@@ -26,15 +27,13 @@ const createSpaces = function() {
   document.getElementById("hangmanword").value = "";
 };
 
-var lettersCorrect = [];
-
 const checkLetter = function(letter) {
   clickCounter = clickCounter += 1;
   console.log(clickCounter);
   var guess = document.createElement("p");
   //console.log(letter);
-  for (i = 0; i < hangmanWord[0].length; i++) {
-    if (hangmanString.charAt(i) == `${letter}`) {
+  for (i = 0; i < hangmanWord.length; i++) {
+    if (hangmanString.charAt(i) == letter) {
       //console.log(`${i}`);
       var blankSpace = document.querySelector(`p${i}`);
       var parent = blankSpace.parentNode;
@@ -42,6 +41,7 @@ const checkLetter = function(letter) {
       var letterSpace = document.createElement(`p${i}`);
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
+      console.log("Guess Correct!");
     } else {
       var imageElement = document.getElementById("hangmanimage");
       imageElement.setAttribute("src", `img/${clickCounter}.png`);
