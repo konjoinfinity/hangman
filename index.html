@@ -10,51 +10,64 @@
     <title>Konjo Hangman</title>
   </head>
   <body>
-    <h1>Konjo Hangman</h1>
-    <div class="hangman-board"></div>
-    <div id="wordboard">
-      <div id="hiddenword"></div>
-    </div>
-    <form class="word">
-      <div class="wordform">
-        <input type="text" id="hangmanword" />
-        <input
-          type="button"
-          id="enterWord"
-          onclick="createWord()"
-          value="Enter Word"
-        />
+    <header>
+      <h1>Konjo Hangman</h1>
+    </header>
+    <main>
+      <div class="hangman-board"></div>
+      <div id="wordboard"></div>
+    </main>
+    <section class="right">
+      <div class="hidden">
+        <div id="hiddenword"></div>
       </div>
-      <div class="letterbuttons">
-        <input type="button" id="letterA" onclick="checkLetter()" value="A" />
-        <input type="button" id="letterB" onclick="checkLetter()" value="B" />
-        <input type="button" id="letterC" onclick="checkLetter()" value="C" />
-        <input type="button" id="letterD" onclick="checkLetter()" value="D" />
-        <input type="button" id="letterE" onclick="checkLetter()" value="E" />
-        <input type="button" id="letterF" onclick="checkLetter()" value="F" />
-        <input type="button" id="letterG" onclick="checkLetter()" value="G" />
-        <input type="button" id="letterH" onclick="checkLetter()" value="H" />
-        <input type="button" id="letterI" onclick="checkLetter()" value="I" />
-        <input type="button" id="letterJ" onclick="checkLetter()" value="J" />
-        <input type="button" id="letterK" onclick="checkLetter()" value="K" />
-        <input type="button" id="letterL" onclick="checkLetter()" value="L" />
-        <input type="button" id="letterM" onclick="checkLetter()" value="M" />
-        <input type="button" id="letterN" onclick="checkLetter()" value="N" />
-        <input type="button" id="letterO" onclick="checkLetter()" value="O" />
-        <input type="button" id="letterP" onclick="checkLetter()" value="P" />
-        <input type="button" id="letterQ" onclick="checkLetter()" value="Q" />
-        <input type="button" id="letterR" onclick="checkLetter()" value="R" />
-        <input type="button" id="letterS" onclick="checkLetter()" value="S" />
-        <input type="button" id="letterT" onclick="checkLetter()" value="T" />
-        <input type="button" id="letterU" onclick="checkLetter()" value="U" />
-        <input type="button" id="letterV" onclick="checkLetter()" value="V" />
-        <input type="button" id="letterW" onclick="checkLetter()" value="W" />
-        <input type="button" id="letterX" onclick="checkLetter()" value="X" />
-        <input type="button" id="letterY" onclick="checkLetter()" value="Y" />
-        <input type="button" id="letterZ" onclick="checkLetter()" value="Z" />
-      </div>
-    </form>
-    <div id="winguesslose"></div>
+      <div id="winguesslose"></div>
+    </section>
+    <section class="left">
+      <form class="word">
+        <div class="wordform">
+          <input type="text" id="hangmanword" />
+          <input
+            type="button"
+            id="enterWord"
+            onclick="createWord()"
+            value="Enter Word"
+          />
+        </div>
+      </form>
+    </section>
+    <footer>
+      <form class="buttons">
+        <div class="letterbuttons">
+          <input type="button" id="letterA" onclick="checkLetter()" value="A" />
+          <input type="button" id="letterB" onclick="checkLetter()" value="B" />
+          <input type="button" id="letterC" onclick="checkLetter()" value="C" />
+          <input type="button" id="letterD" onclick="checkLetter()" value="D" />
+          <input type="button" id="letterE" onclick="checkLetter()" value="E" />
+          <input type="button" id="letterF" onclick="checkLetter()" value="F" />
+          <input type="button" id="letterG" onclick="checkLetter()" value="G" />
+          <input type="button" id="letterH" onclick="checkLetter()" value="H" />
+          <input type="button" id="letterI" onclick="checkLetter()" value="I" />
+          <input type="button" id="letterJ" onclick="checkLetter()" value="J" />
+          <input type="button" id="letterK" onclick="checkLetter()" value="K" />
+          <input type="button" id="letterL" onclick="checkLetter()" value="L" />
+          <input type="button" id="letterM" onclick="checkLetter()" value="M" />
+          <input type="button" id="letterN" onclick="checkLetter()" value="N" />
+          <input type="button" id="letterO" onclick="checkLetter()" value="O" />
+          <input type="button" id="letterP" onclick="checkLetter()" value="P" />
+          <input type="button" id="letterQ" onclick="checkLetter()" value="Q" />
+          <input type="button" id="letterR" onclick="checkLetter()" value="R" />
+          <input type="button" id="letterS" onclick="checkLetter()" value="S" />
+          <input type="button" id="letterT" onclick="checkLetter()" value="T" />
+          <input type="button" id="letterU" onclick="checkLetter()" value="U" />
+          <input type="button" id="letterV" onclick="checkLetter()" value="V" />
+          <input type="button" id="letterW" onclick="checkLetter()" value="W" />
+          <input type="button" id="letterX" onclick="checkLetter()" value="X" />
+          <input type="button" id="letterY" onclick="checkLetter()" value="Y" />
+          <input type="button" id="letterZ" onclick="checkLetter()" value="Z" />
+        </div>
+      </form>
+    </footer>
   </body>
   <script src="main.js"></script>
 </html>
