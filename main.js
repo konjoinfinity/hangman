@@ -63,7 +63,11 @@ const checkWord = function() {
     var parent = document.getElementById("winguesslose");
     document.getElementById("winguesslose").appendChild(para);
   } else {
-    return console.log("Keep Guessing...");
+    if (clickCounter == 9) {
+      console.log("You Lose.");
+    } else {
+      console.log("Keep Guessing...");
+    }
   }
 };
 
