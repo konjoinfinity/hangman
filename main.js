@@ -83,6 +83,8 @@ const checkWord = function() {
       checkloss.appendChild(lose);
       var parent = document.getElementById("winguesslose");
       document.getElementById("winguesslose").appendChild(checkloss);
+      var imageElement = document.getElementById("hangmanimage");
+      imageElement.setAttribute("class", "hinge");
     } else {
       console.log("Keep Guessing...");
     }
