@@ -5,13 +5,17 @@ var lettersCorrect = [];
 var clickCounter = 1;
 
 const createWord = function() {
-  hangmanString = document.getElementById("hangmanword").value;
-  //console.log(hangmanString);
-  hangmanWord.push(document.getElementById("hangmanword").value);
-  //console.log(hangmanWord);
-  hangmanString = hangmanString.toUpperCase();
-  createSpaces();
-  document.getElementById("enterWord").disabled = true;
+  if (document.getElementById("hangmanword").value == "") {
+    return;
+  } else {
+    hangmanString = document.getElementById("hangmanword").value;
+    //console.log(hangmanString);
+    hangmanWord.push(document.getElementById("hangmanword").value);
+    //console.log(hangmanWord);
+    hangmanString = hangmanString.toUpperCase();
+    createSpaces();
+    document.getElementById("enterWord").disabled = true;
+  }
 };
 
 const createSpaces = function() {
@@ -29,11 +33,11 @@ const createSpaces = function() {
 
 const checkLetter = function(letter) {
   var letterFound = false;
-  console.log(clickCounter);
+  //console.log(clickCounter);
   //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == letter) {
-      console.log(i);
+      //console.log(i);
       var blankSpace = document.querySelector(`div${i}`);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
@@ -69,6 +73,8 @@ const checkWord = function() {
     check.appendChild(win);
     var parent = document.getElementById("winguesslose");
     document.getElementById("winguesslose").appendChild(check);
+    var imageElement = document.getElementById("hangmanimage");
+    imageElement.setAttribute("src", "img/9.png");
   } else {
     if (clickCounter == 8) {
       console.log("You Lose.");
