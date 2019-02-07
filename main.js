@@ -30,11 +30,10 @@ const createSpaces = function() {
 const checkLetter = function(letter) {
   clickCounter = clickCounter += 1;
   console.log(clickCounter);
-  var guess = document.createElement("p");
   //console.log(letter);
-  for (i = 0; i < hangmanWord.length; i++) {
+  for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == letter) {
-      //console.log(`${i}`);
+      console.log(i);
       var blankSpace = document.querySelector(`p${i}`);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
