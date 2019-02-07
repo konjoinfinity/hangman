@@ -28,7 +28,7 @@ const createSpaces = function() {
 };
 
 const checkLetter = function(letter) {
-  clickCounter = clickCounter += 1;
+  var letterFound = false;
   console.log(clickCounter);
   //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
@@ -41,12 +41,20 @@ const checkLetter = function(letter) {
       letterSpace.innerHTML = `${chosenLetter}`;
       parent.replaceChild(letterSpace, blankSpace);
       console.log("Guess Correct!");
+      letterFound = true;
     } else {
-      var imageElement = document.getElementById("hangmanimage");
-      imageElement.setAttribute("src", `img/${clickCounter}.png`);
+      console.log("konjo");
     }
   }
+  if (letterFound == false) {
+    clickCounter = clickCounter += 1;
+    var imageElement = document.getElementById("hangmanimage");
+    imageElement.setAttribute("src", `img/${clickCounter}.png`);
+  } else {
+    console.log("konjo");
+  }
   checkWord();
+  letterFound = false;
 };
 
 const checkWord = function() {
@@ -62,7 +70,7 @@ const checkWord = function() {
     var parent = document.getElementById("winguesslose");
     document.getElementById("winguesslose").appendChild(check);
   } else {
-    if (clickCounter == 9) {
+    if (clickCounter == 8) {
       console.log("You Lose.");
       var checkloss = document.createElement("p");
       var lose = document.createTextNode("You Lose...");
