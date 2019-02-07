@@ -15,6 +15,24 @@
     transform: translateX(0);
   }
 }
+
+@keyframes forthAndBack {
+  0% {
+    transform: translateX(75%);
+  }
+
+  25% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(25%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
 /*source: https://raw.githubusercontent.com/daneden/animate.css/master/animate.css
 https://daneden.github.io/animate.css/
 */
@@ -100,15 +118,21 @@ https://daneden.github.io/animate.css/
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: #f5f8ec;
 }
 
 header {
+  max-width: 800px;
 }
 
 main {
+  padding-right: 284px;
+  padding-left: 284px;
 }
 
 nav {
+  animation-delay: 4s;
+  animation: 60s linear infinite forthAndBack;
 }
 
 aside {
@@ -119,7 +143,7 @@ footer {
 
 h1 {
   animation-delay: 1s;
-  animation: 20s linear infinite backAndForth;
+  animation: 20s linear infinite forthAndBack;
 }
 
 .hangman-board {
@@ -139,11 +163,8 @@ img {
 
 .wordform {
   border: 1px solid black;
-}
-
-.hidden {
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-rows: 25px 25px 25px;
+  max-width: 400px;
+  justify-content: center;
 }
 
 div {
@@ -156,12 +177,14 @@ p {
 }
 
 .letterbuttons {
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-rows: 25px 25px 25px;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 20px 20px;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
   align-items: stretch;
   border: 1px solid black;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .winguesslose {
@@ -176,4 +199,6 @@ p {
   padding: 5px;
   margin: 15px;
   max-width: 500px;
+  animation-delay: 1s;
+  animation: 45s linear infinite backAndForth;
 }
