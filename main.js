@@ -68,21 +68,12 @@ const checkWord = function() {
       .innerText.replace(/(\r\n|\n|\r)/gm, "") == hangmanString
   ) {
     console.log("You Win!");
-    var check = document.createElement("p");
-    var win = document.createTextNode("You Win!");
-    check.appendChild(win);
-    var parent = document.getElementById("winguesslose");
-    document.getElementById("winguesslose").appendChild(check);
     var imageElement = document.getElementById("hangmanimage");
     imageElement.setAttribute("src", "img/9.png");
+    imageElement.setAttribute("class", "hinge");
   } else {
     if (clickCounter == 8) {
       console.log("You Lose.");
-      var checkloss = document.createElement("p");
-      var lose = document.createTextNode("You Lose...");
-      checkloss.appendChild(lose);
-      var parent = document.getElementById("winguesslose");
-      document.getElementById("winguesslose").appendChild(checkloss);
       var imageElement = document.getElementById("hangmanimage");
       imageElement.setAttribute("class", "hinge");
     } else {
