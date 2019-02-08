@@ -1,8 +1,10 @@
-Konjo Hangman
+# Konjo Hangman
 
-Welcome to the Konjo Hangman Game!
+## Welcome to the Konjo Hangman Game!
 
-To play: Enter a word into the form using the your device keyboard. Click the
+To play:
+
+Enter a word into the form using the your device keyboard. Click the
 Enter Word button to create the word board and start guessing using the letter
 buttons at the bottom of the screen. When a correct letter is chosen, the
 word board is updated with the corresponding letter guessed. If an incorrect
@@ -23,14 +25,14 @@ Enjoy!
 
 Additional features for the future:
 
--Letter guess entries using the keyboard
+..\*Letter guess entries using the keyboard
 
--Additional animations for different elements
+..\*Additional animations for different elements
 
--CSS theme/color switcher buttons
+..\*CSS theme/color switcher buttons
 
--Desktop/Tablet/Mobile sizing and constraints
+..\*Desktop/Tablet/Mobile sizing and constraints
 
--Reset button
+..\*Reset button
 
--Scoring
+..\*Scoring
