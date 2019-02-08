@@ -37,12 +37,12 @@ const createWord = function() {
 The createSpaces function loops through the hangmanWord array based on the
 length.  It checks to ascertain if the hangmanString at specific characters
 based on the i variable iteration has any spaces (in the case of phrases or
-multiple words) and creates a space element in the wordboard. If the character
+multiple words) and creates a space (" ") element in the wordboard. If the character
 is not a space (an alphanumeric character) the function creates an underscore (_)
 for the character based on the i variable interation.  Once the loop has
 completed, the wordboard conatins underscores and spaces that match the
 wordform/hangmanString entry/value. Finally the function replaces the value from
-the word form to a blank string to appear as if the entry has been submitted.
+the word form to a blank string ("") to appear as if the entry has been submitted.
 */
 
 const createSpaces = function() {
@@ -64,6 +64,19 @@ const createSpaces = function() {
   //console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
 };
+
+/*
+The function checkLetter first assigns letterFound equal to false for usage
+later in the function.  Next it loops through hangmanString comparing each
+character to the inputted guess (letter) passed in from the front end when
+a letter button is clicked.  If the character matches the letter guessed, the
+underscore (_) is replaced with the chosenLetter at the corresponding space in
+the wordboard. "Guess correct" is logged in the console. letterFound is then
+assigned to be true.  If the letter guessed is not in the hangmanString
+(letterFound == false), 1 is added to clickCounter. Then hangmanimage is replaced
+with the next image (1.png, 2.png, 3.png, etc).  The checkWord function is called
+and letterFound is then reassigned to false.
+*/
 
 const checkLetter = function(letter) {
   var letterFound = false;
