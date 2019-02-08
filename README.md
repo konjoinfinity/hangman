@@ -17,12 +17,6 @@ Additional documentation and sourcing of code can be seen inline in each of the
 
 Hangman art was created by Konjo using: https://jspaint.app/
 
-Enjoy!
-
--Konjo
-
---
-
 Additional features for the future:
 
 -Letter guess entries using the keyboard
@@ -35,3 +29,7 @@ Additional features for the future:
 -Reset button
 
 -Scoring
+
+Enjoy!
+
+-Konjo
