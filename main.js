@@ -142,8 +142,9 @@ const checkWord = function() {
 };
 
 /*
-Unable to get this code to function correctly, end result have the enter button
-submit the word/phrase entered.
+souce: https://css-tricks.com/snippets/javascript/javascript-keycodes/
+Adds an event listener to the entire document for the enter button. The enter
+button submits the word/phrase calls the createSpaces function.
 
 --
 */
@@ -151,6 +152,7 @@ function enterPress(evt) {
   let keycode = evt.keyCode;
   if (keycode == 13) {
     createWord();
+    document.removeEventListener("keypress", enterPress);
   }
 }
 let enterWord = document.getElementById("enterWord");
