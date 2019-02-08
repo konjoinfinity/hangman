@@ -10,7 +10,13 @@ var hangmanString = "";
 var clickCounter = 1;
 
 /*
-
+The createWord function first checks to if characters have been entered in the
+wordform entry box, if so then it proceeds to assign hangmanWord and
+hangmanString to the wordform characters entered.  The function also modifies
+hangmanString to all upper case characters for easier comparison for correct
+guessed letters and completed words/phrases matching.  Finally it calls the
+createSpaces function and disables the Enter Word button to prevent multiple
+word/phrase entries. 
 */
 
 const createWord = function() {
