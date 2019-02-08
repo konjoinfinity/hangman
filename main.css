@@ -1,12 +1,3 @@
-.media {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.media > * {
-  flex: 1 1 250px;
-}
-
 @keyframes backAndForth {
   0% {
     transform: translateX(0);
@@ -127,7 +118,14 @@ https://daneden.github.io/animate.css/
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #f5f8ec;
+  background-image: linear-gradient(
+    to right top,
+    #f5f8ec,
+    #e7f6ec,
+    #daf3f2,
+    #d4eef8,
+    #d9e7fb
+  );
 }
 
 header {
@@ -144,10 +142,17 @@ nav {
   animation: 60s linear infinite forthAndBack;
 }
 
-aside {
+.left {
+  float: left;
 }
 
-footer {
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+  font-size: 35px;
 }
 
 h1 {
@@ -173,6 +178,7 @@ img {
 
 .wordform {
   border: 1px solid black;
+  border-radius: 12px;
   max-width: 400px;
   justify-content: center;
 }
@@ -196,6 +202,7 @@ p {
   grid-row-gap: 15px;
   align-items: stretch;
   border: 1px solid black;
+  border-radius: 12px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -209,6 +216,7 @@ p {
   display: flex;
   justify-content: space-around;
   border: 1px solid black;
+  border-radius: 12px;
   padding: 5px;
   margin: 15px;
   max-width: 500px;
