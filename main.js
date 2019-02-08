@@ -16,7 +16,7 @@ hangmanString to the wordform characters entered.  The function also modifies
 hangmanString to all upper case characters for easier comparison for correct
 guessed letters and completed words/phrases matching.  Finally it calls the
 createSpaces function and disables the Enter Word button to prevent multiple
-word/phrase entries. 
+word/phrase entries.
 */
 
 const createWord = function() {
@@ -32,6 +32,18 @@ const createWord = function() {
     document.getElementById("enterWord").disabled = true;
   }
 };
+
+/*
+The createSpaces function loops through the hangmanWord array based on the
+length.  It checks to ascertain if the hangmanString at specific characters
+based on the i variable iteration has any spaces (in the case of phrases or
+multiple words) and creates a space element in the wordboard. If the character
+is not a space (an alphanumeric character) the function creates an underscore (_)
+for the character based on the i variable interation.  Once the loop has
+completed, the wordboard conatins underscores and spaces that match the
+wordform/hangmanString entry/value. Finally the function replaces the value from
+the word form to a blank string to appear as if the entry has been submitted.
+*/
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
