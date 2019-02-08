@@ -142,6 +142,21 @@ const checkWord = function() {
 };
 
 /*
+Unable to get this code to function correctly, end result have the enter button
+submit the word/phrase entered.
+
+--
+*/
+function enterPress(evt) {
+  let keycode = evt.keyCode;
+  if (keycode == 13) {
+    createWord();
+  }
+}
+let enterWord = document.getElementById("enterWord");
+document.addEventListener("keypress", enterPress);
+
+/*
 letterA-Z variables have been assigned with the corresponding ID button elements
 for later usage.
 */
