@@ -1,3 +1,9 @@
+/*
+source: https://git.generalassemb.ly/tomatohammado/event-listener-demo
+backAndForth and forthAndBack animate moves css classes back and forth/forth
+and back across the screen based on the values set in the @keyframes.
+*/
+
 @keyframes backAndForth {
   0% {
     transform: translateX(0);
@@ -35,6 +41,8 @@
 }
 /*source: https://raw.githubusercontent.com/daneden/animate.css/master/animate.css
 https://daneden.github.io/animate.css/
+hinge animates elements to rotate down to the left and fall off the screen
+according to the @keyframes values.
 */
 @-webkit-keyframes hinge {
   0% {
@@ -116,6 +124,11 @@ https://daneden.github.io/animate.css/
   animation-name: hinge;
 }
 
+/*
+source: https://mycolor.space/gradient3
+linear gradient creates and smooth color transition between two colors as the
+background-image.
+*/
 body {
   font-family: "Ubuntu", sans-serif;
   background-image: linear-gradient(
