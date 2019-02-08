@@ -141,6 +141,11 @@ const checkWord = function() {
   }
 };
 
+/*
+letterA-Z variables have been assigned with the corresponding ID button elements
+for later usage.
+*/
+
 const letterA = document.getElementById("letterA");
 const letterB = document.getElementById("letterB");
 const letterC = document.getElementById("letterC");
@@ -167,6 +172,12 @@ const letterW = document.getElementById("letterW");
 const letterX = document.getElementById("letterX");
 const letterY = document.getElementById("letterY");
 const letterZ = document.getElementById("letterZ");
+
+/*
+letterA-Z variables have been assined event addEventListeners which activate when
+the user clicks the corresponding button.  When the click occurs, the buttons is
+deactivated to prevent double clicking buttons (.disabled = true).
+*/
 
 letterA.addEventListener("click", function(event) {
   //console.log(letterA.value);
