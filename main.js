@@ -108,7 +108,18 @@ const checkLetter = function(letter) {
   letterFound = false;
 };
 
-//source: https://www.textfixer.com/tutorials/javascript-line-breaks.php
+//source: .replace(/(\n)/gm, "") - https://www.textfixer.com/tutorials/javascript-line-breaks.php
+/*
+The checkWord function checks to see if the entire word or phrase has been
+guessed before reaching image 8.  The function first calls the current wordboard
+and removes spacing (.replace(/(\n)/gm, "") to prepare for comparison.  Then if
+the modified wordboard is equal to hangmanString without spaces, "You Win!"
+is console logged.  The hangman image is then replacd with the final winning
+image (9.png) and the image class is changed to hinge for css effects.  Otherwise
+if the click counter equals 8, "You Lose." is console logged and the hangman
+image is then replacd with the final losing image (8.png) and the image class is
+also changed to hinge for css effects.
+*/
 
 const checkWord = function() {
   if (
