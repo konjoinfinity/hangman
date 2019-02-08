@@ -24,13 +24,12 @@ const createWord = function() {
     return;
   } else {
     hangmanString = document.getElementById("hangmanword").value;
-    //console.log(hangmanString);
     hangmanWord.push(document.getElementById("hangmanword").value);
-    //console.log(hangmanWord);
     hangmanString = hangmanString.toUpperCase();
     createSpaces();
     document.getElementById("enterWord").disabled = true;
   }
+  document.getElementById("hangmanword").blur();
 };
 
 /*
@@ -61,7 +60,6 @@ const createSpaces = function() {
       document.getElementById("wordboard").appendChild(para);
     }
   }
-  //console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
 };
 
@@ -80,11 +78,8 @@ and letterFound is then reassigned to false.
 
 const checkLetter = function(letter) {
   var letterFound = false;
-  //console.log(clickCounter);
-  //console.log(letter);
   for (i = 0; i < hangmanWord[0].length; i++) {
     if (hangmanString.charAt(i) == letter) {
-      //console.log(i);
       var blankSpace = document.querySelector(`div${i}`);
       var parent = blankSpace.parentNode;
       var chosenLetter = hangmanString.charAt(i);
@@ -155,6 +150,7 @@ function enterPress(evt) {
     document.removeEventListener("keypress", enterPress);
   }
 }
+
 let enterWord = document.getElementById("enterWord");
 document.addEventListener("keypress", enterPress);
 
@@ -197,131 +193,105 @@ deactivated to prevent double clicking buttons (.disabled = true).
 */
 
 letterA.addEventListener("click", function(event) {
-  //console.log(letterA.value);
   document.getElementById("letterA").disabled = true;
 });
 
 letterB.addEventListener("click", function(event) {
-  //console.log(letterB.value);
   document.getElementById("letterB").disabled = true;
 });
 
 letterC.addEventListener("click", function(event) {
-  //console.log(letterC.value);
   document.getElementById("letterC").disabled = true;
 });
 
 letterD.addEventListener("click", function(event) {
-  //console.log(letterD.value);
   document.getElementById("letterD").disabled = true;
 });
 
 letterE.addEventListener("click", function(event) {
-  //console.log(letterE.value);
   document.getElementById("letterE").disabled = true;
 });
 
 letterF.addEventListener("click", function(event) {
-  //console.log(letterF.value);
   document.getElementById("letterF").disabled = true;
 });
 
 letterG.addEventListener("click", function(event) {
-  //console.log(letterG.value);
   document.getElementById("letterG").disabled = true;
 });
 
 letterH.addEventListener("click", function(event) {
-  //console.log(letterH.value);
   document.getElementById("letterH").disabled = true;
 });
 
 letterI.addEventListener("click", function(event) {
-  //console.log(letterI.value);
   document.getElementById("letterI").disabled = true;
 });
 
 letterJ.addEventListener("click", function(event) {
-  //console.log(letterJ.value);
   document.getElementById("letterJ").disabled = true;
 });
 
 letterK.addEventListener("click", function(event) {
-  //console.log(letterK.value);
   document.getElementById("letterK").disabled = true;
 });
 
 letterL.addEventListener("click", function(event) {
-  //console.log(letterL.value);
   document.getElementById("letterL").disabled = true;
 });
 
 letterM.addEventListener("click", function(event) {
-  //console.log(letterM.value);
   document.getElementById("letterM").disabled = true;
 });
 
 letterN.addEventListener("click", function(event) {
-  //console.log(letterN.value);
   document.getElementById("letterN").disabled = true;
 });
 
 letterO.addEventListener("click", function(event) {
-  //console.log(letterO.value);
   document.getElementById("letterO").disabled = true;
 });
 
 letterP.addEventListener("click", function(event) {
-  //console.log(letterP.value);
   document.getElementById("letterP").disabled = true;
 });
 
 letterQ.addEventListener("click", function(event) {
-  //console.log(letterQ.value);
   document.getElementById("letterQ").disabled = true;
 });
 
 letterR.addEventListener("click", function(event) {
-  //console.log(letterR.value);
   document.getElementById("letterR").disabled = true;
 });
 
 letterS.addEventListener("click", function(event) {
-  //console.log(letterS.value);
   document.getElementById("letterS").disabled = true;
 });
 
 letterT.addEventListener("click", function(event) {
-  //console.log(letterT.value);
   document.getElementById("letterT").disabled = true;
 });
 
 letterU.addEventListener("click", function(event) {
-  //console.log(letterU.value);
   document.getElementById("letterU").disabled = true;
 });
 
 letterV.addEventListener("click", function(event) {
-  //console.log(letterV.value);
   document.getElementById("letterV").disabled = true;
 });
 
 letterW.addEventListener("click", function(event) {
-  //console.log(letterW.value);
   document.getElementById("letterW").disabled = true;
 });
 
 letterX.addEventListener("click", function(event) {
-  //console.log(letterX.value);
   document.getElementById("letterX").disabled = true;
 });
 
 letterY.addEventListener("click", function(event) {
-  //console.log(letterY.value);
   document.getElementById("letterY").disabled = true;
 });
 
 letterZ.addEventListener("click", function(event) {
-  //console.log(letterZ.value);
   document.getElementById("letterZ").disabled = true;
 });
