@@ -1,8 +1,17 @@
+/*
+variables: hangmanWord array for entered hangman word to utilize the length
+property for looping, entered hangmanword as a string for comparison of a letter
+match and word/phrase match, and clickCounter for determining which hangman image
+to display.
+*/
+
 var hangmanWord = [];
-var spacesArray = [];
 var hangmanString = "";
-var lettersCorrect = [];
 var clickCounter = 1;
+
+/*
+
+*/
 
 const createWord = function() {
   if (document.getElementById("hangmanword").value == "") {
@@ -34,7 +43,6 @@ const createSpaces = function() {
       document.getElementById("wordboard").appendChild(para);
     }
   }
-  spacesArray = hangmanWord[0].length;
   //console.log(hangmanWord[0].length);
   document.getElementById("hangmanword").value = "";
 };
