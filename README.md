@@ -24,8 +24,13 @@ Enjoy!
 Additional features for the future:
 
 -Letter guess entries using the keyboard
+
 -Additional animations for different elements
+
 -CSS theme/color switcher buttons
+
 -Desktop/Tablet/Mobile sizing and constraints
+
 -Reset button
+
 -Scoring
