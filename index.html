@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
+    <!--linked to utilize the Ubuntu font from Google-->
     <link
       href="https://fonts.googleapis.com/css?family=Ubuntu"
       rel="stylesheet"
@@ -15,6 +16,8 @@
     </header>
     <main>
       <div class="hangman-board">
+        <!--assigned class konjo as a placeholder to be changed for css
+        animation and effects when certain javascript conditions are met-->
         <img src="img/1.png" class="konjo" id="hangmanimage" alt="1" />
       </div>
       <div id="wordboard"></div>
@@ -24,8 +27,13 @@
     </aside>
     <nav>
       <form class="word">
+        <!--wordform stores the underscores and spaces after the createSpaces
+      has been called and executed-->
         <div class="wordform">
           <input type="text" id="hangmanword" autofocus />
+          <!--clicking the Enter Word button calls the createWord function
+        to place underscores and spaces according to the number of letters in
+      the word or phrase entered-->
           <input
             type="button"
             id="enterWord"
@@ -36,6 +44,8 @@
       </form>
     </nav>
     <footer>
+      <!--letter buttons call the checkLetter function and pass in the letter
+    (ex 'A') to be checked against hangmanString for matches-->
       <form class="buttons">
         <div class="letterbuttons">
           <input
@@ -197,9 +207,10 @@
         </div>
       </form>
     </footer>
+    <script src="main.js"></script>
+    <p class="left">Copyright 2019</p>
+    <p class="right">Created by Konjo</p>
+    <!--source: https://www.infinitysymbol.net/ infinity symbol-->
+    <p class="center">&#8734;</p>
   </body>
-  <script src="main.js"></script>
-  <p class="left">Copyright 2019</p>
-  <p class="right">Created by Konjo</p>
-  <p class="center">&#8734;</p>
 </html>
