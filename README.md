@@ -18,3 +18,13 @@ Hangman art was created by Konjo using: https://jspaint.app/
 Enjoy!
 
 -Konjo
+
+--
+
+Additional features for the future:
+
+-Additional animations for different elements
+-CSS theme/color switcher buttons
+-Desktop/Tablet/Mobile sizing and constraints
+-Reset button
+-Scoring
