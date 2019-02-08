@@ -11,6 +11,8 @@ with the corresponding letter guessed. If an incorrect letter is chosen, the
 hangman image is changed. Don't guess more than 7 incorrect letters, otherwise
 hangman will swing... If all correct letters are chosen you win!
 
+![alt text](https://github.com/konjoinfinity/hangman/blob/master/img/1.png "Konjo Hangman")
+
 Additional documentation and sourcing of code can be seen inline in each of the
 .html, .css, and .js files.
 
