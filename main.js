@@ -61,6 +61,8 @@ const checkLetter = function(letter) {
   letterFound = false;
 };
 
+//source: https://www.textfixer.com/tutorials/javascript-line-breaks.php
+
 const checkWord = function() {
   if (
     document

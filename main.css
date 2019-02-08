@@ -171,8 +171,8 @@ img {
 }
 
 .word {
-  margin: 5px;
-  padding: 5px;
+  margin: 3px;
+  padding: 3px;
   max-width: 500px;
 }
 
@@ -181,13 +181,14 @@ img {
   border-radius: 12px;
   max-width: 400px;
   justify-content: center;
+  padding: 2px;
 }
 
 form {
 }
 
 div {
-  padding-top: 5px;
+  padding-top: 3px;
   display: grid;
 }
 
@@ -217,7 +218,6 @@ p {
   justify-content: space-around;
   border: 1px solid black;
   border-radius: 12px;
-  padding: 5px;
   margin: 15px;
   max-width: 500px;
   animation-delay: 1s;
