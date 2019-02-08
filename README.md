@@ -23,7 +23,6 @@ Enjoy!
 
 Additional features for the future:
 
--Submission by typing enter/return after entering word/phrase
 -Additional animations for different elements
 -CSS theme/color switcher buttons
 -Desktop/Tablet/Mobile sizing and constraints
