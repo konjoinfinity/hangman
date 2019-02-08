@@ -1,3 +1,12 @@
+.media {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.media > * {
+  flex: 1 1 250px;
+}
+
 @keyframes backAndForth {
   0% {
     transform: translateX(0);
@@ -159,12 +168,16 @@ img {
 .word {
   margin: 5px;
   padding: 5px;
+  max-width: 500px;
 }
 
 .wordform {
   border: 1px solid black;
   max-width: 400px;
   justify-content: center;
+}
+
+form {
 }
 
 div {
