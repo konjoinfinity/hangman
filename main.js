@@ -20,11 +20,19 @@ const createWord = function() {
 
 const createSpaces = function() {
   for (i = 0; i < hangmanWord[0].length; i++) {
-    var para = document.createElement(`div${i}`);
-    var t = document.createTextNode("_ ");
-    para.appendChild(t);
-    var parent = document.getElementById("wordboard");
-    document.getElementById("wordboard").appendChild(para);
+    if (hangmanString.charAt(i) == " ") {
+      var para = document.createElement(`div${i}`);
+      var t = document.createTextNode(" ");
+      para.appendChild(t);
+      var parent = document.getElementById("wordboard");
+      document.getElementById("wordboard").appendChild(para);
+    } else {
+      var para = document.createElement(`div${i}`);
+      var t = document.createTextNode("_ ");
+      para.appendChild(t);
+      var parent = document.getElementById("wordboard");
+      document.getElementById("wordboard").appendChild(para);
+    }
   }
   spacesArray = hangmanWord[0].length;
   //console.log(hangmanWord[0].length);
@@ -65,9 +73,8 @@ const checkLetter = function(letter) {
 
 const checkWord = function() {
   if (
-    document
-      .querySelector("#wordboard")
-      .innerText.replace(/(\r\n|\n|\r)/gm, "") == hangmanString
+    document.querySelector("#wordboard").innerText.replace(/(\n)/gm, "") ==
+    hangmanString.replace(" ", "")
   ) {
     console.log("You Win!");
     var imageElement = document.getElementById("hangmanimage");
