@@ -148,6 +148,7 @@ function enterPress(evt) {
   if (keycode == 13) {
     createWord();
     document.removeEventListener("keypress", enterPress);
+    evt.preventDefault();
   }
 }
 
